@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://RollInterface.cs" type="Script" id=1]
+[ext_resource path="res://data/DataGlobalObjective.cs" type="Script" id=2]
+[ext_resource path="res://data/DataCompilation.cs" type="Script" id=3]
+[ext_resource path="res://data/DataExecution.cs" type="Script" id=4]
+[ext_resource path="res://data/DataInitialization.cs" type="Script" id=5]
+[ext_resource path="res://data/DataRestoration.cs" type="Script" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,8 +34,10 @@ margin_bottom = 209.0
 rect_scale = Vector2( 2, 2 )
 text = "ROLL"
 script = ExtResource( 1 )
-isPoop = true
 _outputPath = NodePath("../LabelGlobalObjectiveOutput")
+
+[node name="Data" type="Node" parent="ButtonGlobalObjective"]
+script = ExtResource( 2 )
 
 [node name="LabelGlobalObjectiveOutput" type="Label" parent="."]
 margin_left = 56.0
@@ -66,6 +73,11 @@ margin_right = 485.0
 margin_bottom = 379.0
 rect_scale = Vector2( 2, 2 )
 text = "ROLL"
+script = ExtResource( 1 )
+_outputPath = NodePath("../LabelInitializationOutput")
+
+[node name="Data" type="Node" parent="ButtonInitialization"]
+script = ExtResource( 5 )
 
 [node name="LabelInitializationOutput" type="Label" parent="."]
 margin_left = 56.0
@@ -101,6 +113,11 @@ margin_right = 485.0
 margin_bottom = 549.0
 rect_scale = Vector2( 2, 2 )
 text = "ROLL"
+script = ExtResource( 1 )
+_outputPath = NodePath("../LabelCompilationOutput")
+
+[node name="Data" type="Node" parent="ButtonCompilation"]
+script = ExtResource( 3 )
 
 [node name="LabelCompilationOutput" type="Label" parent="."]
 margin_left = 56.0
@@ -136,6 +153,11 @@ margin_right = 485.0
 margin_bottom = 719.0
 rect_scale = Vector2( 2, 2 )
 text = "ROLL"
+script = ExtResource( 1 )
+_outputPath = NodePath("../LabelExecutionOutput")
+
+[node name="Data" type="Node" parent="ButtonExecution"]
+script = ExtResource( 4 )
 
 [node name="LabelExecutionOutput" type="Label" parent="."]
 margin_left = 56.0
@@ -171,6 +193,11 @@ margin_right = 485.0
 margin_bottom = 889.0
 rect_scale = Vector2( 2, 2 )
 text = "ROLL"
+script = ExtResource( 1 )
+_outputPath = NodePath("../LabelRestorationOutput")
+
+[node name="Data" type="Node" parent="ButtonRestoration"]
+script = ExtResource( 6 )
 
 [node name="LabelRestorationOutput" type="Label" parent="."]
 margin_left = 56.0
@@ -190,3 +217,7 @@ custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
 text = "*Included in Entromancy: The Orichite Age"
 
 [connection signal="button_down" from="ButtonGlobalObjective" to="ButtonGlobalObjective" method="Roll"]
+[connection signal="button_down" from="ButtonInitialization" to="ButtonInitialization" method="Roll"]
+[connection signal="button_down" from="ButtonCompilation" to="ButtonCompilation" method="Roll"]
+[connection signal="button_down" from="ButtonExecution" to="ButtonExecution" method="Roll"]
+[connection signal="button_down" from="ButtonRestoration" to="ButtonRestoration" method="Roll"]

@@ -4,7 +4,7 @@ using System;
 
 public class RollInterface : Button
 {
-	//store the node paths of output label by exposing them in the inspector
+	//store the node path of output label by exposing it in the inspector
 	[Export]
 	private NodePath _outputPath;
 	
@@ -21,9 +21,13 @@ public class RollInterface : Button
 		//seed RNG
 		rng.Randomize();
 		_output = GetNode<Godot.Label>(_outputPath);
-		data = InterfaceData.GlobalObjectiveData;
+
+		//get data from the attached node
+		InterfaceData id = GetNode<InterfaceData>("Data");
+		data = id.Data;
 	}
 
+	//randomly select from data string array and feed to output text
 	private void Roll()
 	{
 		string outputText = data[rng.Randi() % data.Length];
