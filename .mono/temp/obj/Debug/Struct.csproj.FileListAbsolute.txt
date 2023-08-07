@@ -1,0 +1,9 @@
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\bin\Debug\Struct.dll
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\bin\Debug\Struct.pdb
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.csproj.AssemblyReference.cache
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.AssemblyInfoInputs.cache
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.AssemblyInfo.cs
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.csproj.CoreCompileInputs.cache
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.dll
+C:\Users\Som\coding\Godot\3.5\Struct\.mono\temp\obj\Debug\Struct.pdb

@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://OptionInterfaces.cs" type="Script" id=1]
+[ext_resource path="res://InterfaceManager.cs" type="Script" id=2]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 640.0
+margin_bottom = 1135.0
+
+[node name="LabelStruct" type="Label" parent="Panel"]
+margin_left = 216.0
+margin_top = 32.0
+margin_right = 258.0
+margin_bottom = 44.0
+rect_scale = Vector2( 5, 5 )
+text = "STRUCT"
+
+[node name="OptionInterfaces" type="OptionButton" parent="Panel"]
+margin_left = 152.0
+margin_top = 120.0
+margin_right = 260.0
+margin_bottom = 133.0
+rect_scale = Vector2( 3, 3 )
+text = "Global Objective"
+align = 1
+items = [ "Global Objective", null, false, 0, null, "Faction Objective", null, false, 1, null, "Faction Points", null, false, 2, null, "Locations", null, false, 3, null, "Encounters", null, false, 4, null, "SKill Difficulty", null, false, 5, null, "Outcome", null, false, 6, null, "NPCs", null, false, 7, null, "NPC Disposition", null, false, 8, null, "Combat Difficulty", null, false, 9, null, "Adversaries", null, false, 10, null, "Redhat Patrols", null, false, 11, null, "Time Rifts", null, false, 12, null ]
+selected = 0
+script = ExtResource( 1 )
+
+[node name="InterfaceScene" type="Node2D" parent="Panel"]
+
+[connection signal="InterfaceChosen" from="Panel/OptionInterfaces" to="." method="OnInterfaceChosen"]
+[connection signal="item_selected" from="Panel/OptionInterfaces" to="Panel/OptionInterfaces" method="OptionInterfacesitemSelected"]

@@ -1,0 +1,37 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label Interface" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 197.0
+margin_right = 118.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelEncounters" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 198.0
+margin_right = 275.0
+margin_bottom = 207.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Encounters"
+
+[node name="ButtonEncounters" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 190.0
+margin_right = 485.0
+margin_bottom = 209.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+
+[node name="LabelEncountersOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 256.0
+margin_right = 296.0
+margin_bottom = 308.0
+rect_scale = Vector2( 2, 2 )
+text = "Scope the Scene. You’re required to investigate a new Oxidium storefront as a potential safehouse. Secure it with as much stealth as you can muster."
+autowrap = true
