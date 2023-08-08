@@ -1,0 +1,188 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://data/Adversaries/DataDeadlyThreat.cs" type="Script" id=1]
+[ext_resource path="res://data/Adversaries/DataMediumThreat.cs" type="Script" id=2]
+[ext_resource path="res://data/Adversaries/DataHighThreat.cs" type="Script" id=3]
+[ext_resource path="res://data/Adversaries/DataLightThreat.cs" type="Script" id=4]
+[ext_resource path="res://scripts/RollInterface.cs" type="Script" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label Interface" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 197.0
+margin_right = 118.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelLightThreat" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 198.0
+margin_right = 275.0
+margin_bottom = 207.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Adversaries::
+Light Threat"
+
+[node name="ButtonLightThreat" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 190.0
+margin_right = 485.0
+margin_bottom = 209.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 5 )
+_outputPath = NodePath("../LabelLightThreatOutput")
+
+[node name="Data" type="Node" parent="ButtonLightThreat"]
+script = ExtResource( 4 )
+
+[node name="LabelLightThreatOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 256.0
+margin_right = 296.0
+margin_bottom = 308.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[node name="Label Interface2" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 367.0
+margin_right = 118.0
+margin_bottom = 376.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelMediumThreat" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 368.0
+margin_right = 275.0
+margin_bottom = 377.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Adversaries::
+Medium Threat"
+
+[node name="ButtonMediumThreat" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 360.0
+margin_right = 485.0
+margin_bottom = 379.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 5 )
+_outputPath = NodePath("../LabelMediumThreatOutput")
+
+[node name="Data" type="Node" parent="ButtonMediumThreat"]
+script = ExtResource( 2 )
+
+[node name="LabelMediumThreatOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 426.0
+margin_right = 296.0
+margin_bottom = 478.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[node name="Label Interface3" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 537.0
+margin_right = 118.0
+margin_bottom = 546.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelHighThreat" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 538.0
+margin_right = 275.0
+margin_bottom = 547.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Adversaries::
+High Threat"
+
+[node name="ButtonHighThreat" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 530.0
+margin_right = 485.0
+margin_bottom = 549.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 5 )
+_outputPath = NodePath("../LabelHighThreatOutput")
+
+[node name="Data" type="Node" parent="ButtonHighThreat"]
+script = ExtResource( 3 )
+
+[node name="LabelHighThreatOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 596.0
+margin_right = 296.0
+margin_bottom = 648.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[node name="Label Interface4" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 707.0
+margin_right = 118.0
+margin_bottom = 716.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelDeadlyThreat" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 708.0
+margin_right = 275.0
+margin_bottom = 717.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Adversaries::
+Deadly Threat"
+
+[node name="ButtonDeadlyThreat" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 700.0
+margin_right = 485.0
+margin_bottom = 719.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 5 )
+_outputPath = NodePath("../LabelDeadlyThreatOutput")
+
+[node name="Data" type="Node" parent="ButtonDeadlyThreat"]
+script = ExtResource( 1 )
+
+[node name="LabelDeadlyThreatOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 766.0
+margin_right = 296.0
+margin_bottom = 818.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[node name="LabelAdversaries" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 1088.0
+margin_right = 623.0
+margin_bottom = 1121.0
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "*Animal Companion adversaries do not benefit from the Nature's Chosen Terramancer feature
+
+"
+
+[node name="LabelToA" type="Label" parent="."]
+margin_left = 269.0
+margin_top = 1105.0
+margin_right = 612.0
+margin_bottom = 1126.0
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "**Some adversaries included in Entromancy: The Orichite Age"
+
+[connection signal="button_down" from="ButtonLightThreat" to="ButtonLightThreat" method="Roll"]
+[connection signal="button_down" from="ButtonMediumThreat" to="ButtonMediumThreat" method="Roll"]
+[connection signal="button_down" from="ButtonHighThreat" to="ButtonHighThreat" method="Roll"]
+[connection signal="button_down" from="ButtonDeadlyThreat" to="ButtonDeadlyThreat" method="Roll"]

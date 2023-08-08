@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://data/Encounters/DataEncounters.cs" type="Script" id=1]
+[ext_resource path="res://scripts/RollInterface.cs" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label Interface" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 197.0
+margin_right = 118.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelEncounters" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 198.0
+margin_right = 275.0
+margin_bottom = 207.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Encounters"
+
+[node name="ButtonEncounters" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 190.0
+margin_right = 485.0
+margin_bottom = 209.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 2 )
+_outputPath = NodePath("../LabelEncountersOutput")
+
+[node name="Data" type="Node" parent="ButtonEncounters"]
+script = ExtResource( 1 )
+
+[node name="LabelEncountersOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 256.0
+margin_right = 296.0
+margin_bottom = 308.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[connection signal="button_down" from="ButtonEncounters" to="ButtonEncounters" method="Roll"]

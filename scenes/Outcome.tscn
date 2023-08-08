@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://data/Outcome/DataOutcomeFailure.cs" type="Script" id=1]
+[ext_resource path="res://data/Outcome/DataOutcomeSuccess.cs" type="Script" id=2]
+[ext_resource path="res://scripts/RollInterface.cs" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label Interface" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 197.0
+margin_right = 118.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelOutcomeSuccess" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 198.0
+margin_right = 275.0
+margin_bottom = 207.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Outcome::Success"
+
+[node name="ButtonOutcomeSuccess" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 190.0
+margin_right = 485.0
+margin_bottom = 209.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 3 )
+_outputPath = NodePath("../LabelOutcomeSuccessOutput")
+
+[node name="Data" type="Node" parent="ButtonOutcomeSuccess"]
+script = ExtResource( 2 )
+
+[node name="LabelOutcomeSuccessOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 256.0
+margin_right = 296.0
+margin_bottom = 308.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[node name="Label Interface2" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 419.0
+margin_right = 118.0
+margin_bottom = 428.0
+rect_scale = Vector2( 2, 2 )
+text = "Interface: "
+
+[node name="LabelOutcomeFailure" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 420.0
+margin_right = 275.0
+margin_bottom = 429.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.890196, 0.109804, 0.47451, 1 )
+text = "Outcome::Failure"
+
+[node name="ButtonOutcomeFailure" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 412.0
+margin_right = 485.0
+margin_bottom = 431.0
+rect_scale = Vector2( 2, 2 )
+text = "ROLL"
+script = ExtResource( 3 )
+_outputPath = NodePath("../LabelOutcomeFailureOutput")
+
+[node name="Data" type="Node" parent="ButtonOutcomeFailure"]
+script = ExtResource( 1 )
+
+[node name="LabelOutcomeFailureOutput" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 478.0
+margin_right = 296.0
+margin_bottom = 530.0
+rect_scale = Vector2( 2, 2 )
+autowrap = true
+
+[connection signal="button_down" from="ButtonOutcomeSuccess" to="ButtonOutcomeSuccess" method="Roll"]
+[connection signal="button_down" from="ButtonOutcomeFailure" to="ButtonOutcomeFailure" method="Roll"]
